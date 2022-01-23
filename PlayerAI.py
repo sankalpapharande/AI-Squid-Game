@@ -5,17 +5,14 @@ from helper_functions import *
 from PlayerMinMax.move_minimax_new import find_move
 from PlayerMinMax.trap_minimax_new import find_trap
 
-
 # setting path to parent directory
 sys.path.append(os.getcwd())
 
 
-# TO BE IMPLEMENTED
-#
 class PlayerAI(BaseAI):
 
     def __init__(self) -> None:
-        # You may choose to add attributes to your player - up to you!
+        # Adding attributes to player
         super().__init__()
         self.pos = None
         self.player_num = None
@@ -34,7 +31,6 @@ class PlayerAI(BaseAI):
 
     def getMove(self, grid: Grid) -> tuple:
         """
-        YOUR CODE GOES HERE
 
         The function should return a tuple of (x,y) coordinates to which the player moves.
 
@@ -55,7 +51,6 @@ class PlayerAI(BaseAI):
 
     def getTrap(self, grid: Grid) -> tuple:
         """
-        YOUR CODE GOES HERE
 
         The function should return a tuple of (x,y) coordinates to which the player *WANTS* to throw the trap.
 

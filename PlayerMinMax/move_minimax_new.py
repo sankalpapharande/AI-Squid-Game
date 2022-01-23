@@ -1,5 +1,3 @@
-from Grid import Grid
-from Utils import *
 import sys
 import random
 from helper_functions import *
@@ -92,12 +90,10 @@ def get_opponent_neighbours(grid: Grid, player_num: int):
     return opponent_neighbours
 
 
-# heuristic given to us by them
 def white_cell_move_heuristic(grid, my_position, opponent_pos, current_move, player_neighbours, opponent_neighbours):
     emptiness = get_emptiness_around_the_move(grid, current_move)
     if diagonal(my_position, current_move):
         emptiness = 1.5 * emptiness
-    # print("Move:{}, emptiness:{}".format(current_move, emptiness))
     if 47 - len(grid.getAvailableCells()) < 15:
         # Chasing the opponent
         d = manhattan_distance(my_position, opponent_pos)

@@ -1,14 +1,11 @@
-import numpy as np
-import random
-import sys
 import os
+import sys
 from helper_functions import *
-# setting path to parent directory
-sys.path.append(os.getcwd())
-
 from BaseAI import BaseAI
 from Grid import Grid
 
+# setting path to parent directory
+sys.path.append(os.getcwd())
 OPPONENT = lambda player: 3 - player
 
 
@@ -37,13 +34,6 @@ class MediumAI(BaseAI):
     def getTrap(self, grid: Grid):
         """EasyAI throws randomly to the immediate neighbors of the opponent"""
 
-        # find opponent
-        opponent = grid.find(3 - self.player_num)
-
-        # find all available cells surrounding Opponent
-        available_cells = grid.get_neighbors(opponent, only_available=True)
-
-        # throw to one of the available cells randomly
-        #trap = random.choice(available_cells)
+        # throwing a trap using heuristic
         trap = trap_h(player_num=self.player_num, grid=grid)
         return trap

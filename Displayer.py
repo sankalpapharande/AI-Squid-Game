@@ -1,6 +1,6 @@
-from BaseDisplayer import BaseDisplayer
 import platform
-import os
+
+from BaseDisplayer import BaseDisplayer
 
 colorMap = { 0: 100,
              1: 102,

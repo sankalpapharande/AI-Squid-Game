@@ -1,13 +1,14 @@
-import sys
 import os
+import sys
+
 from helper_functions import *
+
 # setting path to parent directory
 sys.path.append(os.getcwd())
 import random
 from BaseAI import BaseAI
 from Grid import Grid
-from PlayerMinMax.trap_minimax_new import find_trap
-from PlayerMinMax.move_minimax_new import find_move
+
 OPPONENT = lambda player: 3 - player
 
 

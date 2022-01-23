@@ -1,8 +1,6 @@
 import random
+
 from BaseAI import BaseAI
-import numpy as np
-from Grid import Grid
-from Utils import *
 from helper_functions import *
 
 
@@ -46,5 +44,3 @@ class ComputerAI(BaseAI):
         trap = random.choice(available_cells) if available_cells else None
 
         return trap
-
-

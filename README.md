@@ -1,3 +1,8 @@
+## To run the game play
+1. Clone the repository using  `git clone https://github.com/sankalpapharande/AI-Squid-Game.git`
+2. Do `cd AI-Squid-Game`
+3. run `python3 Game.py`  (Note: Player 1 is the our player and Player 2 is the AI agent against which we are playing)
+
 # AI Squid Game: Trap! (Fall 2021)
 
 The final coding challenge for COMS W4701 - Artificial Intelligence, Columbia University.
